@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <span class="title">calc</span>
+        <div class="theme-label">THEME</div>
+        <div class="theme-switcher">
+          <div class="nums">
+            <div class="num">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+          </div>
+          <div class="toggle-container">
+            <input type="radio" name="toggle" id="toggle1" checked />
+            <label for="toggle1">1</label>
+
+            <input type="radio" name="toggle" id="toggle2" />
+            <label for="toggle2">2</label>
+
+            <input type="radio" name="toggle" id="toggle3" />
+            <label for="toggle3">3</label>
+
+            <div class="slider"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="display">399,981</div>
+      <div class="calculator">
+        <div class="buttons">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button delete">DEL</button>
+
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button operator">+</button>
+
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button operator">-</button>
+
+          <button class="button">.</button>
+          <button class="button">0</button>
+          <button class="button operator">/</button>
+          <button class="button operator">x</button>
+
+          <button class="button reset">RESET</button>
+          <button class="button equal">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

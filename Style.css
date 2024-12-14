@@ -1,0 +1,316 @@
+/* Import Google Font for styling */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: bold; 
+  font-size:large
+  
+}
+
+:root {
+    --bg-color: #3b4664;
+    --body-color: #ffffff;
+
+    --toggle-container-color:#222b44;
+    --slider: #91261a;
+    
+    --display-bg:#181f32;
+    --display-color: #ffffff;
+
+    --calc-bg: #242d44; 
+    
+    --btn-bg: #f0eed2;
+    --btn-color: #444;
+    --btn-shadow: #b6b3af;
+    --btn-hover: #d1ccc0;
+
+    --dr-bg: #647299;
+    --dr-color: #ffffff;
+    --dr-shadow:#444e6b;
+    --dr-hover: #353f5e;
+
+    --equal-bg: #d03f2f;
+    --equal-color: #ffffff;
+    --equal-shadow: #91261a;
+    --equal-hover:#b33224;
+
+    }
+  
+
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--body-color);
+  padding: 10px;
+}
+
+
+
+
+/* Container for theme switcher and calculator */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 540px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--body-color);
+  }
+
+  .theme-label {
+    color: var(--body-color);
+    font-size: 70%;
+    height: 0vh;
+    margin-left: 36vh; 
+    align-items: center;
+  }
+    
+/* Theme switcher container */
+.theme-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .nums{
+    display: flex;
+    gap: 5px;
+  }
+
+  
+  .num {
+    font-size: 0.8em; /* Adjust font size */
+    color: var(--body-color);
+    text-align: center;
+    
+}
+
+.theme-switcher .num {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .theme-switcher .num:nth-child(2) {
+    margin-left: 7px;
+    margin-right: 4px;
+  }
+  
+  .theme-switcher .num:nth-child(3) {
+    margin-left: 7px;
+  }
+  
+  .toggle-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 26px;
+    background-color: var(--toggle-container-color);
+    border-radius: 15px;
+  }
+  
+  /* Hide the radio buttons */
+  .toggle-container input[type="radio"] {
+    display: none;
+  }
+  
+  /* Label styling */
+  .toggle-container label {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: var(--toggle-container-color);
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    border-radius: 15px;
+  }
+  
+  /* Slider style */
+  .slider {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--slider);
+    border-radius: 15px;
+    transition: all 0.3s ease;  
+  }
+  
+  /* Move the slider depending on the selected radio button */
+  #toggle1:checked ~ .slider {
+    transform: translateX(0);
+  }
+  
+  #toggle2:checked ~ .slider {
+    transform: translateX(20px);
+  }
+  
+  #toggle3:checked ~ .slider {
+    transform: translateX(45px);
+  }
+
+/* Calculator */
+.calculator {
+  background-color: var(--calc-bg);
+  border-radius: 9px;
+  padding: 30px;
+  width: 100%;
+  max-width: 540px;
+  height: 481px;
+}
+
+/* Display */
+.display {
+  background-color: var(--display-bg);
+  color: var(--display-color);
+  font-size: 3em;
+  text-align: right;
+  width: 100%;
+  max-width: 540px;
+  height: 130px;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 27px 23px; 
+}
+
+/* Buttons styling */
+.button {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-size: 2em;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 4px 0px var(--btn-shadow);
+  cursor: pointer;
+  width: 102px;
+  height: 60px;
+}
+
+.button:hover {
+  background-color: var(--btn-hover);
+}
+
+
+
+.delete {
+  background-color: var(--dr-bg);
+  color: var(--dr-color);
+  box-shadow: 0px 4px 0px var(--dr-shadow);
+font-size: 150%;
+}
+.delete:hover {
+    background-color: var(--dr-hover);   
+    }
+
+.reset {
+  background-color: var(--dr-bg);
+  color: var(--dr-color);
+  box-shadow: 0px 4px 0px var(--dr-shadow);
+  grid-column: span 2;
+  width: 227px;
+height: 60px;
+font-size: 150%;
+}
+
+.reset:hover {
+background-color: var(--dr-hover);   
+}
+
+.equal {
+  background-color: var(--equal-bg);
+  color: var(--equal-color);
+  box-shadow: 0px 4px 0px  var(--equal-shadow);
+  grid-column: span 2;
+  width: 227px;
+height: 60px;
+font-size: 150%;
+}
+
+.equal:hover {
+  background-color: var(--equal-hover);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 650px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+      height: 100%;
+    }
+  
+    .header {
+      width: 100%;
+      align-items: center;
+      height: 100%;
+      margin-bottom: -50px;
+    }
+
+    .theme-switcher {
+      display: flex;
+  gap: 6px;
+    }
+
+    .theme-label {
+    font-size: 0.8em;
+    margin-left: 30vh;
+  }
+  
+    .num {
+      justify-content: space-between;
+    }
+
+.calculator {
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 2em;
+    height: 100px;
+    padding: 20px;
+  }
+  
+    .button {
+      font-size: 1.2em;
+      padding: 15px;
+      width: 100%;
+      height: auto;
+    }
+  
+    .buttons {
+      gap: 10px;
+    }
+  
+  }
