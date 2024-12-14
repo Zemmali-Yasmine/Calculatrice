@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "--slider": "#78A6BC",
         },
         3: {
-          "--bg-color": "#100220",
+          "--bg-color": "#25004F",
           "--calc-bg": "#1e0836",
           "--btn-bg": "#56077c",
           "--btn-color": "#150020",
